@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Tobias Sandström">
+    <title>Inlämningsuppgift 1, Formulärvalidering</title>
+    <!-- Css -->
+    <link rel="stylesheet" href="style.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <h1>Inlämningsuppgift 1 Javascript </h1>
+            <h3>Formulärvalidering</h3>
+        </div>
+    </header>
+    <div class="img-container">
+    <img src="./images/mountain.png" alt="mountain-image">
+    </div>
+
+    
+    <div class="space-container"></div>
+
+    
+    <form id="formen">
+        
+        <div class="form-container">
+            <h2>Vänligen ange era uppgifter så vi kan registrera er</h2>
+
+            <div class="formInput-container">
+                <input id="firstname" type="text" placeholder="Förnamn" name="" class="formInput">
+                <div id="error-firstname" class="error-msg"></div>
+            </div>
+            
+            <div class="formInput-container">
+                <input id="lastname" type="text" placeholder="Efternamn" name="" class="formInput">
+                <div id="error-lastname" class="error-msg"></div>
+            </div>
+            
+            <div class="formInput-container">
+                <input id="email" type="email" placeholder="Epostadress" name="" class="formInput">
+                <div id="error-email" class="error-msg"></div>
+            </div>
+            
+            <div class="formInput-container">
+                <input id="password" type="password" placeholder="Lösenord" name=""class="formInput">
+                <div id="error-password" class="error-msg"></div>
+            </div>
+            
+            <div class="formInput-container">
+                <input id="repeatPassword" type="password" placeholder="Upprepa lösenord" class="formInput" name="">
+                <div id="approved-repeatPassword" class="approved"></div>
+                <div id="error-repeatPassword" class="error-msg"></div>
+                
+            </div>
+
+
+            <p>Ange er adress</p>
+            <div class="formInput-container">
+                <input id="adress" type="text" placeholder="Adress" class="formInput" name="">
+                <div id="error-adress"></div>
+            </div>
+            <div class="formInput-container">
+                <input id="zipCode" type="text" placeholder="Postnummer" class="formInput" name="">
+                <div id="error-zipCode"></div>
+            </div>
+            <div class="formInput-container">
+                <input id="city" type="text" placeholder="Stad" class="formInput" name="">
+                <div id="error-city"></div>
+            </div>
+
+            
+            <div class="formInput-container">
+                <p class="birthdayText">Ange er födelsedag</p>
+                <input id="birthday" type="date" class="formInput" name="">
+                <div id="error-birthday"></div>
+            </div>
+            
+
+            <button id="submitBtn" class="submitBtn" type="button" onclick="registerCustomer()">Registrera</button>
+            <button id="consolelogBtn" class="submitBtn" type="button" onclick="consoleCustomers()">Logga kunderna i konsolen</button>
+        </div>
+        
+    
+    
+    
+    <!-- Font awesome -->
+    <script src=https://kit.fontawesome.com/124ac6c2b5.js crossorigin=anonymous></script>
+    <!-- Javascript -->
+    <script src=script.js></script>
+</body>
+</html>
