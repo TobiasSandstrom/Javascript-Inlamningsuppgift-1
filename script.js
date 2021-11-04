@@ -273,15 +273,8 @@ document.getElementById("birthday").addEventListener("blur", function() {
     
 })
 
-
+// Funktion för att validera ålder
 function validateAge(birthdate) {
-
-    // const dn = Date.now();
-    // const datenow = new Date(dn)
-    // const difference = (dn - birthdate.getTime())
-    // const agediff = new Date(difference)
-    // const age = Math.abs(agediff.getUTCFullYear() - 1970)
-    // const birthRegex = new RegExp("^[1][8-9]+|^[2-9][0-9]+")
 
     const dn = Date.now();
     const datenow = new Date(dn)
@@ -289,23 +282,6 @@ function validateAge(birthdate) {
     const agediff = new Date(difference)
     const age = Math.abs(agediff.getUTCFullYear() - 1970)
     const birthRegex = new RegExp("^[1][8-9]|^[2-9][0-9]|^[1-9][0-9][0-9]")
-        
-
-        
-        
-    // if (age >= 18) {
-        
-    //     document.getElementById(`error-birthday`).setAttribute("class", "approved")
-    //     document.getElementById(`error-birthday`).innerHTML = `<i class="far fa-check"></i>`
-    //     birthdayBool = true
-    //     checkBtn()
-    // }
-    // else{
-    //     document.getElementById("error-birthday").innerText = "Du måste vara 18 eller äldre för att kunna registrera"
-    //     document.getElementById(`error-birthday`).setAttribute("class", "error-msg")
-    //     birthdayBool = false
-    //     checkBtn()
-    // }
 
     if (birthRegex.test(age)) {
         
