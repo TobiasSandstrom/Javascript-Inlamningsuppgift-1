@@ -78,10 +78,11 @@ function checkMinlength(input, minlength = 2, x = "et") {
             break;
         }
     }
+
     //Om det inte godkänns
     if(!validatelengthRegex.test(input.value)) {
 
-        document.getElementById(`error-${input.id}`).innerHTML = `${input.placeholder}${x} måste innehålla minst ${minlength} bokstäver`
+        document.getElementById(`error-${input.id}`).innerHTML = `${input.placeholder}${x} måste innehålla minst ${minlength} tecken`
         document.getElementById(`error-${input.id}`).setAttribute("class", "error-msg")
 
         switch (input.id) {
@@ -111,6 +112,7 @@ function checkMinlength(input, minlength = 2, x = "et") {
             break;
         }
     }
+
     //Om input är tom
     if(input.value == "") {
         document.getElementById(`error-${input.id}`).innerHTML = ``
@@ -140,12 +142,9 @@ function checkMinlength(input, minlength = 2, x = "et") {
             zipCodeBool = false
             checkBtn()
             break;
-
         }
     }
-
 }
-
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -155,7 +154,6 @@ document.getElementById("email").addEventListener("blur", function(){
     let email = document.getElementById("email")
     validateEmail(email)
 })
-
 
 // Validera emailen
 function validateEmail(input) {
@@ -179,10 +177,10 @@ function validateEmail(input) {
         }
     }
     else {
-            document.getElementById(`error-email`).innerHTML = ""
-            document.getElementById(`error-email`).setAttribute("class", "error-msg")
-            emailBool = false
-            checkBtn()
+        document.getElementById(`error-email`).innerHTML = ""
+        document.getElementById(`error-email`).setAttribute("class", "error-msg")
+        emailBool = false
+        checkBtn()
     }
 }
 
@@ -232,7 +230,6 @@ function samePassword(pw1, pw2) {
 // Kontrollerar lösenordens styrka
 function strongPassword(input, input2) {
 
-    
     const strongPasswordRegex = new RegExp("^(?=.*[A-Za-z])(?=.*\\d)(?=.*[@$!%*#?&])[A-Za-z\\d@$!%*#?&]{8,}$");
     
     if(strongPasswordRegex.test(input.value)) {
@@ -251,7 +248,6 @@ function strongPassword(input, input2) {
     }
 }
 
-
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 // ----------------- Födelsedag/Ålder ---------------
@@ -262,13 +258,11 @@ document.getElementById("birthday").addEventListener("blur", function() {
     if(birthdate != "") {
 
         validateAge(birthdate)
-
     }
     else{
 
         birthdayBool = false
         checkBtn()
-
     }
     
 })
@@ -291,18 +285,12 @@ function validateAge(birthdate) {
         checkBtn()
     }
     else{
-        console.log("false")
         document.getElementById("error-birthday").innerText = "Du måste vara 18 eller äldre för att kunna registrera"
         document.getElementById(`error-birthday`).setAttribute("class", "error-msg")
         birthdayBool = false
         checkBtn()
     }
-
-
-
-    
 }
-
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -318,7 +306,6 @@ function checkBtn(){
         button.disabled = true
     }
 }
-
 
 // ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -361,8 +348,6 @@ function registerCustomer() {
     customerList.push(customer)    
 }
 
-
-
 //Funktion till den andra knappen, så den kan logga ut kundlistan
 function consoleCustomers() {
 
@@ -373,5 +358,3 @@ function consoleCustomers() {
         console.log("Det finns inga kunder finns registrerade")
     }
 }
-
-//Bytmig123!

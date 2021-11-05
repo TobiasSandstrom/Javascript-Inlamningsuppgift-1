@@ -13,21 +13,19 @@
     <header class="header">
         <div class="header-container">
             <h1>Inlämningsuppgift 1 Javascript </h1>
-            <h3>Formulärvalidering</h3>
+            <h2>Formulärvalidering</h2>
         </div>
     </header>
     <div class="img-container">
     <img src="./images/mountain.png" alt="mountain-image">
     </div>
-
     
     <div class="space-container"></div>
 
-    
     <form id="formen">
         
         <div class="form-container">
-            <h2>Vänligen ange era uppgifter så vi kan registrera er</h2>
+            <h3>Vänligen ange era uppgifter så vi kan registrera er</h3>
 
             <div class="formInput-container">
                 <input id="firstname" type="text" placeholder="Förnamn" name="" class="formInput">
@@ -62,25 +60,25 @@
                 <input id="adress" type="text" placeholder="Adress" class="formInput" name="">
                 <div id="error-adress"></div>
             </div>
+            
             <div class="formInput-container">
                 <input id="zipCode" type="text" placeholder="Postnummer" class="formInput" name="">
                 <div id="error-zipCode"></div>
             </div>
+
             <div class="formInput-container">
                 <input id="city" type="text" placeholder="Stad" class="formInput" name="">
                 <div id="error-city"></div>
             </div>
 
-            
             <div class="formInput-container">
                 <p class="birthdayText">Ange er födelsedag</p>
                 <input id="birthday" type="date" class="formInput" name="">
                 <div id="error-birthday"></div>
             </div>
-            
 
-            <button id="submitBtn" class="submitBtn" type="button" onclick="registerCustomer()">Registrera</button>
-            <button id="consolelogBtn" class="submitBtn" type="button" onclick="consoleCustomers()">Logga kunderna i konsolen</button>
+            <button id="submitBtn" class="formBtn" type="button" onclick="registerCustomer()">Registrera</button>
+            <button id="consolelogBtn" class="formBtn" type="button" onclick="consoleCustomers()">Logga kunderna i konsolen</button>
         </div>
         
     
